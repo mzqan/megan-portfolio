@@ -11,6 +11,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Megan Lee",
+  description: "Megan Lee's Personal Portfolio",
 };
 
 export default function RootLayout({
@@ -19,12 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} antialiased`}
+        className={`${montserrat.variable} antialiased `}
       >
         {children}
       </body>
     </html>
-  );
+  )
 }
