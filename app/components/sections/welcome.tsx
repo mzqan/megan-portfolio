@@ -1,8 +1,27 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useEffect } from 'react';
+import Image from "next/image";
+
+const BACKGROUND_IMAGE_PATH = '/background_home.png';
 
 const Welcome = () => {
+  
+  useEffect(() => {
+    const existingLink = document.querySelector(`link[href="${BACKGROUND_IMAGE_PATH}"][rel="preload"]`);
+    
+    if (!existingLink) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = BACKGROUND_IMAGE_PATH;
+      link.as = 'image';
+      link.type = 'image/png'; 
+
+      document.head.appendChild(link);
+    }
+  }, [])
+
   return (
     <section
       id="home"
@@ -10,7 +29,7 @@ const Welcome = () => {
     >
       <div className="justify-center md:w-3/5">
         <motion.div
-          className="w-full"
+          className="w-full relative h-[60vh] mx-auto"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
@@ -20,7 +39,13 @@ const Welcome = () => {
           }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src={"/welcome_banner2.png"} draggable="false" />
+          <Image 
+            src={"/welcome_banner2.png"} 
+            draggable="false" 
+            alt='Hey, Im Megan Lee'
+            fill
+            style={{ objectFit: 'contain' }}
+          />
         </motion.div>
       </div>
     </section>
