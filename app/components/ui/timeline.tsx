@@ -1,5 +1,4 @@
 "use client"
-
 import { useScroll, useTransform, motion } from "framer-motion"
 import { useRef, useState, useEffect } from "react"
 import ExperienceCard, { ExperienceCardProps } from "@/components/ui/experienceCard"
@@ -26,28 +25,28 @@ export const Timeline = (props: TimelineProps) => {
   }, [data])
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    target: containerRef, // Keep this if the container is the scrolling element, or remove if the whole window scrolls.
+    offset: ["start start", "end end"],
   })
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, contentHeight])
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1])
 
   return (
-    <div className="w-full sm:px-10 px-6 z-10" ref={containerRef}>
-      <div ref={contentRef} className="relative max-w-7xl mx-auto pb-20 mt-2">
+    <div className="flex w-full sm:px-10 px-6 z-10" ref={containerRef}>
+      <div ref={contentRef} className="relative max-w-7xl mx-auto pb-80 mt-2">
         <div
           style={{
             height: contentHeight + "px",
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-0.5 bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-neutral-200 to-transparent to-99% mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+          className="absolute md:left-8 left-8 top-0 w-0.5 bg-red/50"
         >
           <motion.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-0.5 bg-linear-to-t from-accent-secondary via-accent-secondary to-transparent from-0% via-10% rounded-full"
+            className="absolute inset-x-0 top-0 w-0.5 bg-linear-to-b from-accent-primary via-accent-primary to-transparent rounded-full"
           />
         </div>
 

@@ -11,9 +11,8 @@ const ExperienceData: TimelineProps["data"] = [
     location: "Oakville, ON",
     description: (
       <>
-        Building a performance-reporting and tooling portal with
-        React, Next.JS, TypeScript, MYSQL and Python allowing test engineers to
-        track and triage 300+ KPIs for regressions.
+        Building a performance-reporting portal with React, Next.JS, TypeScript, MYSQL and Python allowing test engineers
+        to evaluate and track 300+ KPIs, efficiently triage regressions, and schedule tests on lab units.
       </>
     ),
     images: [{ src: "/ford.png" }],
@@ -26,10 +25,9 @@ const ExperienceData: TimelineProps["data"] = [
     location: "Waterloo, ON",
     description: (
       <>
-        Building a <span className="font-bold">performance-reporting and tooling</span> portal with{" "}
-        <span className="font-bold">React, Next.JS, TypeScript, MYSQL and Python</span>, allowing test engineers to
-        track and triage <span className="font-bold">300+ </span>
-        KPIs for regressions.
+        Developing Python and VBA scripts to automate critical security and operational audits, such as flagging of
+        network switches for port decomissioning and reviwing MS Active Directory security groups for a 500+ employee
+        organization.
       </>
     ),
     images: [{ src: "/Renison.png" }],
@@ -42,33 +40,34 @@ const ExperienceData: TimelineProps["data"] = [
     location: "Toronto, ON",
     description: (
       <>
-        Building a <span className="font-bold">performance-reporting and tooling</span> portal with{" "}
-        <span className="font-bold">React, Next.JS, TypeScript, MYSQL and Python</span>, allowing test engineers to
-        track and triage <span className="font-bold">300+ </span>
-        KPIs for regressions.
+        Supporting data migration process for 15,000+ clinical and laboratory records by performing the extraction,
+        cleaning and cosolidation of fragmented data across existing sources.
       </>
     ),
     images: [{ src: "/UHN.jpg" }],
   },
 ]
 
-export default function Experience() {
+const Experience = () => {
   return (
     <section
       id="experience"
-      className="flex w-full h-screen bg-[url(/background_ext.png)] bg-top bg-cover
+      className="
+      flex w-full justify-center
+      bg-[url(/background_ext.png)] bg-top bg-cover bg-repeat-y
       relative
-        after:absolute after:inset-0
-        after:bg-linear-to-b
+      after:absolute after:inset-0
+      after:bg-linear-to-b
         
-        after:from-foreground
-        after:via-foreground/25 after:via-7.5%
-        after:to-transparent after:to-16%
-        
-        after:z-0
+      after:from-foreground
+      after:via-foreground/25 after:via-7.5%
+      after:to-transparent after:to-16%  
+      after:z-0
     "
     >
       <Timeline data={ExperienceData} />
     </section>
   )
 }
+
+export default Experience
