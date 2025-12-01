@@ -12,12 +12,6 @@ const About = () => {
         bg-[url(/background_home_ctd.png)] bg-cover bg-top
 
         relative
-        after:absolute after:inset-0
-        after:bg-linear-to-t
-        after:from-foreground
-        after:via-foreground/25 after:via-7.5%
-        after:to-transparent after:to-15%
-        after:z-0
       "
     >
       <div className="flex justify-center min-h-screen items-center w-full md:w-1/2 py-4 pb-8 md:pb-0 z-10">

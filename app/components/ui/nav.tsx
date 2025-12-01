@@ -40,7 +40,7 @@ const Nav = () => {
           {navLinks.map((link) => (
             <button
               key={link.name}
-              className="text-2xl font-bold text-background hover:text-accent-primary transition-colors"
+              className="text-2xl font-bold text-primary hover:text-accent-primary transition-colors"
               onClick={() => scrollToSection(link.href)}
             >
               {link.name}

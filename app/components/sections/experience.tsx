@@ -30,7 +30,7 @@ const ExperienceData: TimelineProps["data"] = [
         organization.
       </>
     ),
-    images: [{ src: "/Renison.png" }],
+    images: [{ src: "/Renison.jpg" }],
   },
   {
     title: "2024",
@@ -56,13 +56,6 @@ const Experience = () => {
       flex w-full justify-center
       bg-[url(/background_ext.png)] bg-top bg-cover bg-repeat-y
       relative
-      after:absolute after:inset-0
-      after:bg-linear-to-b
-        
-      after:from-foreground
-      after:via-foreground/25 after:via-7.5%
-      after:to-transparent after:to-16%  
-      after:z-0
     "
     >
       <Timeline data={ExperienceData} />
