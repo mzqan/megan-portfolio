@@ -1,11 +1,15 @@
-@import "tailwindcss"; 
+@import "tailwindcss";
 
 @theme {
-  --color-primary: rgb(255, 255, 255);
-  --color-accent-primary: rgb(114, 152, 177);
+  --color-primary: rgb(244, 246, 248);
+  --color-accent-primary: rgb(111, 134, 150);
+  --color-accent-secondary: rgb(131, 153, 167);
+  --color-background: rgb(219, 234, 240);
+  --color-foreground: rgb(205, 221, 231);
 }
 
 body {
   color: var(--color-primary);
   font-family: var(--font-montserrat);
+  background-color: var(--color-background);
 }
