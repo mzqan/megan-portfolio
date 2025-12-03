@@ -1,4 +1,3 @@
-"use client"
 import { useScroll, useTransform, motion } from "framer-motion"
 import { useRef, useState, useEffect } from "react"
 import ExperienceCard, { ExperienceCardProps } from "@/components/ui/experienceCard"

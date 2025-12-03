@@ -1,5 +1,3 @@
-"use client"
-
 const Card = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <div

@@ -1,33 +1,20 @@
-"use client"
-
 import { motion } from "framer-motion"
-import { useEffect } from 'react';
-import Image from "next/image";
-
-const BACKGROUND_IMAGE_PATH = '/background_home.png';
+import Image from "next/image"
 
 const Welcome = () => {
-  
-  useEffect(() => {
-    const existingLink = document.querySelector(`link[href="${BACKGROUND_IMAGE_PATH}"][rel="preload"]`);
-    
-    if (!existingLink) {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = BACKGROUND_IMAGE_PATH;
-      link.as = 'image';
-      link.type = 'image/png'; 
-
-      document.head.appendChild(link);
-    }
-  }, [])
-
   return (
-    <section
-      id="home"
-      className="flex w-full h-screen justify-center items-center bg-[url(/background_home.png)] bg-cover bg-bottom bg-no-repeat"
-    >
-      <div className="justify-center md:w-3/5">
+    <section id="home" className="relative flex w-full h-screen justify-center items-center overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={"/background_home.png"}
+          alt="Home Background"
+          fill
+          priority
+          className="object-cover object-bottom"
+          sizes="100vw"
+        />
+      </div>
+      <div className="justify-center md:w-3/5 relative z-10">
         <motion.div
           className="w-full relative h-[60vh] mx-auto"
           initial={{ opacity: 0, y: -30 }}
@@ -39,12 +26,12 @@ const Welcome = () => {
           }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <Image 
-            src={"/welcome_banner2.png"} 
-            draggable="false" 
-            alt='Hey, Im Megan Lee'
+          <Image
+            src={"/welcome_banner2.png"}
+            draggable="false"
+            alt="Hey, Im Megan Lee"
             fill
-            style={{ objectFit: 'contain' }}
+            style={{ objectFit: "contain" }}
           />
         </motion.div>
       </div>
