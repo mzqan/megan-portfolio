@@ -27,7 +27,7 @@ const Welcome = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <Image
-            src={"/welcome_banner2.png"}
+            src={"/welcome_banner.png"}
             draggable="false"
             alt="Hey, Im Megan Lee"
             fill

@@ -18,7 +18,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
       <div className="flex flex-col space-y-4">
         <div className="flex items-center space-x-3">
           {logoSrc && (
-            <div className="w-25 h-25 shrink-0 bg-white border border-gray-200 rounded-md overflow-hidden flex items-center justify-center">
+            <div className="w-25 h-25 shrink-0 rounded-md overflow-hidden flex items-center justify-center">
               <img src={logoSrc} className="object-contain w-full h-full p-0.5"/>
             </div>
           )}

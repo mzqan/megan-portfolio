@@ -31,7 +31,7 @@ const ExperienceData: TimelineProps["data"] = [
         organization.
       </>
     ),
-    images: [{ src: "/Renison.jpg" }],
+    images: [{ src: "/renison.png" }],
   },
   {
     title: "2024",
