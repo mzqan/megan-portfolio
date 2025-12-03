@@ -1,6 +1,7 @@
 "use client"
 
 import { Timeline, TimelineProps } from "@/components/ui/timeline"
+import Image from "next/image"
 
 const ExperienceData: TimelineProps["data"] = [
   {
@@ -11,8 +12,8 @@ const ExperienceData: TimelineProps["data"] = [
     location: "Oakville, ON",
     description: (
       <>
-        Building a performance-reporting portal with React, Next.JS, TypeScript, MYSQL and Python allowing test engineers
-        to evaluate and track 300+ KPIs, efficiently triage regressions, and schedule tests on lab units.
+        Building a performance-reporting portal with React, Next.JS, TypeScript, MYSQL and Python allowing test
+        engineers to evaluate and track 300+ KPIs, efficiently triage regressions, and schedule tests on lab units.
       </>
     ),
     images: [{ src: "/ford.png" }],
@@ -54,10 +55,19 @@ const Experience = () => {
       id="experience"
       className="
       flex w-full justify-center
-      bg-[url(/background_ext.png)] bg-top bg-cover bg-repeat-y
       relative
     "
     >
+      <div className="absolute inset-0 z-0 bg-fixed">
+        <Image
+          src={"/background_ext.png"}
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="100vw"
+        />
+      </div>
       <Timeline data={ExperienceData} />
     </section>
   )

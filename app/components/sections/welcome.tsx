@@ -4,7 +4,7 @@ import Image from "next/image"
 const Welcome = () => {
   return (
     <section id="home" className="relative flex w-full h-screen justify-center items-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-fixed">
         <Image
           src={"/background_home.png"}
           alt="Home Background"
