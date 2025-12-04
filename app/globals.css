@@ -11,5 +11,11 @@
 body {
   color: var(--color-primary);
   font-family: var(--font-montserrat);
-  background-color: var(--color-background);
+  background: linear-gradient(to bottom, 
+    rgb(219, 234, 240) 0%, 
+    rgb(205, 221, 231) 50%, 
+    rgb(190, 210, 220) 100%
+  );
+  min-height: 100vh;
+  background-attachment: fixed;
 }

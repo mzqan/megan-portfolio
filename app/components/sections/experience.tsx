@@ -60,13 +60,14 @@ const Experience = () => {
     >
       <div className="absolute inset-0 z-0 bg-fixed">
         <Image
-          src={"/background_ext.png"}
+          src="/background_ext.png"
           alt="Background"
           fill
           priority
           className="object-cover object-top"
           sizes="100vw"
         />
+        <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none" />
       </div>
       <Timeline data={ExperienceData} />
     </section>
