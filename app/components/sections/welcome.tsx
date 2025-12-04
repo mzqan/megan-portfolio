@@ -16,13 +16,13 @@ const Welcome = () => {
           sizes="100vw"
         />
       </div>
-      <div className="justify-center w-full sm:w-4/5 md:w-3/5 lg:w-1/2 relative z-10 px-4 sm:px-0">
+      <div className="justify-center w-full sm:w-4/5 md:w-3/5 lg:w-1/2 relative z-10">
         <motion.div
           className="w-full relative h-[40vh] sm:h-[50vh] md:h-[60vh] mx-auto"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 1.0,
+            duration: 1.5,
             ease: "easeOut",
             delay: 0.2,
           }}

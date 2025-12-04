@@ -19,16 +19,16 @@ const About = () => {
         <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-background via-background/50 to-transparent pointer-events-none" />
       </div>
       <div className="flex justify-center min-h-[50vh] md:min-h-screen items-center w-full md:w-1/2 py-8 md:py-4 pb-4 md:pb-0 z-10 px-4">
-        <div className="relative w-3/5 sm:w-2/5 md:w-3/5 max-w-md aspect-square rounded-full overflow-hidden shadow-lg">
+        <div className="relative w-3/5 sm:w-2/5 md:w-3/5 max-w-md aspect-square rounded-full overflow-hidden shadow-lg shadow-black/35">
           <Image src={"/me.jpg"} draggable="false" alt="megan_lee" fill style={{ objectFit: "cover" }} />
         </div>
       </div>
-      <div className="flex justify-center items-center py-4 md:py-0 w-full md:w-1/2 z-10 px-4 md:px-0">
+      <div className="flex justify-center items-center py-2 md:py-0 w-full md:w-1/2 z-10 px-4 md:px-0">
         <Card>
           <p className="text-base sm:text-lg leading-7 sm:leading-8 text-accent-primary p-2 sm:p-3">
-            Hello there! I'm a software developer with a passion for accessibility, efficiency and innovation.
-            <br />
-            Currently, I'm studying Computer Engineering at the University of Waterloo🌼
+            Hello there! I'm a software developer with a passion for accessibility, efficiency and innovation. Currently, I'm studying Computer Engineering at the University of Waterloo.
+            <br /><br />
+            Besides coding, I love cooking, hiking scenic trails, and reading dystopian novels!
           </p>
         </Card>
       </div>

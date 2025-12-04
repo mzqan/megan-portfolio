@@ -15,7 +15,7 @@ const FadeInWrapper = (props: { children: React.ReactNode}) => {
     }, [])
 
     return (
-    <div className={`w-full min-h-screen transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`w-full min-h-screen transition-opacity duration-1500 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         {children}
     </div>
     )

@@ -1,6 +1,7 @@
 "use client"
 
 import { Timeline, TimelineProps } from "@/components/ui/timeline"
+import Footer from "@/components/ui/footer"
 import Image from "next/image"
 
 const ExperienceData: TimelineProps["data"] = [
@@ -54,7 +55,7 @@ const Experience = () => {
     <section
       id="experience"
       className="
-      flex w-full justify-center
+      flex flex-col w-full justify-center
       relative
     "
     >
@@ -70,6 +71,7 @@ const Experience = () => {
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-background via-background/50 to-transparent pointer-events-none" />
       </div>
       <Timeline data={ExperienceData} />
+      <Footer />
     </section>
   )
 }
