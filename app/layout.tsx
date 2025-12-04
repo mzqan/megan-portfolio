@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
@@ -12,12 +12,6 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Megan Lee",
   description: "Megan Lee's Personal Portfolio",
-};
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
 };
 
 export default function RootLayout({
